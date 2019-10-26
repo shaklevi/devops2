@@ -1,4 +1,5 @@
-from InitVMs import SW_Installer
+from ..InitVMs import SW_Installer
+
 
 def printMenu():
     print("1.Display IPs of Internal Network.\n\

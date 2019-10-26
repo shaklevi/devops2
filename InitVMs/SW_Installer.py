@@ -1,6 +1,4 @@
-from InitVMs import customed_ssh_client
-import os;
-
+from ..InitVMs import customed_ssh_client
 
 user = 'shahar'
 password = 'root'
