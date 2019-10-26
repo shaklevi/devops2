@@ -1,4 +1,4 @@
-from ..InitVMs import customed_ssh_client
+from InitVMs import customed_ssh_client
 
 user = 'shahar'
 password = 'root'

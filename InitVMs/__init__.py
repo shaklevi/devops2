@@ -1,4 +1,4 @@
-from ..InitVMs import SW_Installer
+from InitVMs import SW_Installer
 
 
 def printMenu():
