@@ -9,6 +9,11 @@ class Installer:
         self.ssh_client= None
     def display_ips(self):
         print("\nFunction: display_ips()\n")
+        self.ip = "192.168.2.42"
+        self.ssh_client = customed_ssh_client.CustomedSshClient(self.ip)
+        ret_val = self.ssh_client.sendCommand("nmap 192.168.2.0/24 -n -sP | grep report | awk '{print $5}'")
+        self.ssh_client.closeCconnection()
+
 
     def install_sw(self, ip):
         self.ip = ip
@@ -73,5 +78,6 @@ class Installer:
         ret_val = self.ssh_client.sendCommand('sudo apt update')
         ret_val = self.ssh_client.sendCommand('sudo apt install snmpd snmp libsnmp-dev -y')
         print("\n FINISH Snmp V3 Installation! =]")
+        self.ssh_client.closeCconnection()
 
 
