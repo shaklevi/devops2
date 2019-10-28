@@ -68,10 +68,10 @@ class Installer:
         # ret_val = self.ssh_client.sendCommand('sudo -- sh -c "echo 192.168.2.105 jenkins-master >> /etc/hosts"')
         # print("\n FINISH etc/hosts Configuration! =]")
 
-        # Change root password
-        print("\nChanging User Root Password...")  ##6
-        ret_val = self.ssh_client.sendCommand('sudo passwd root')
-        print("\n FINISH Change root password! =]")
+        # # Change root password
+        # print("\nChanging User Root Password...")  ##6
+        # ret_val = self.ssh_client.sendCommand('sudo passwd root')
+        # print("\n FINISH Change root password! =]")
 
         # Snmp V3
         print("\nInstalling Snmp.... ")  ##7
