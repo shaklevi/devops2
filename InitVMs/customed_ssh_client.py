@@ -10,7 +10,7 @@ class CustomedSshClient:
 
     def __init__(self, host_ip):
         # self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        key = paramiko.RSAKey.from_private_key_file(r'C:/PEM/net4ukey.pem')
+        key = paramiko.RSAKey.from_private_key_file(r'/home/ubuntu/net4ukey.pem')
         self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         self.ssh.connect(hostname=host_ip, username=self.user, look_for_keys=True, pkey=key)
 

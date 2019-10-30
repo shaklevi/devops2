@@ -1,4 +1,4 @@
-from InitVMs import customed_ssh_client
+from customed_ssh_client import *
 
 user = 'shahar'
 password = 'root'
@@ -10,14 +10,14 @@ class Installer:
     def display_ips(self):
         print("\nFunction: display_ips()\n")
         self.ip = "192.168.2.42"
-        self.ssh_client = customed_ssh_client.CustomedSshClient(self.ip)
+        self.ssh_client = CustomedSshClient(self.ip)
         ret_val = self.ssh_client.sendCommand("nmap 192.168.2.0/24 -n -sP | grep report | awk '{print $5}'")
         self.ssh_client.closeCconnection()
 
 
     def install_sw(self, ip):
         self.ip = ip
-        self.ssh_client = customed_ssh_client.CustomedSshClient(ip)
+        self.ssh_client = CustomedSshClient(ip)
         print(f"\nFunction: install_sw() on IP: {self.ip}\n")
         self.install_ubuntu()
         # ssh_client = customed_ssh_client.CustomedSshClient(ip)

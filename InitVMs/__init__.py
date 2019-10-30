@@ -1,4 +1,6 @@
-from InitVMs import SW_Installer
+#!/bin/python3.7
+
+from SW_Installer import *
 
 
 def printMenu():
@@ -27,7 +29,7 @@ def enter_ip():
     return ip_str
 
 def startInstallerMenu():
-    installer = SW_Installer.Installer()
+    installer = Installer()
     while True:
         printMenu()
         choice = input("Enter your choice:")
